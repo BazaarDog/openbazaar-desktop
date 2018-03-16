@@ -25,7 +25,7 @@ const defaultSearchProviders = [
   {
     id: 'bazaardog',
     name: 'Bazaar Dog',
-    logo: '../logo.png',
+    logo: '../imgs/bazaarDogLogoOffline.png',
     localLogo: '../imgs/bazaarDogLogoOffline.png',
     search: 'https://bazaar.dog',
     listings: 'https://bazaar.dog/api/',
