@@ -22,6 +22,18 @@ const defaultSearchProviders = [
     torlistings: 'http://vnjzhvm5gkctyldn.onion/api/',
     locked: true,
   },
+  {
+    id: 'bazaardog',
+    name: 'Bazaar Dog',
+    logo: '../logo.png',
+    localLogo: '../imgs/bazaarDogLogoOffline.png',
+    search: 'https://bazaar.dog',
+    listings: 'https://bazaar.dog/api/',
+    reports: 'https://bazaar.dog/reports',
+    torsearch: 'http://obfojhv6ay5fedog.onion/',
+    torlistings: 'http://obfojhv6ay5fedog.onion/api/',
+    locked: false,
+  },
 ];
 
 export default defaultSearchProviders;
