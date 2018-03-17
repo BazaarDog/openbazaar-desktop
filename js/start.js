@@ -64,6 +64,10 @@ function getValidLanguage(lang) {
 const initialLang = getValidLanguage(app.localSettings.get('language'));
 app.localSettings.set('language', initialLang);
 moment.locale(initialLang);
+
+// send language up to main window for requests
+ipcRenderer.send('accepted-language', initialLang);
+
 app.polyglot = new Polyglot();
 app.polyglot.extend(require(`./languages/${initialLang}.json`));
 
