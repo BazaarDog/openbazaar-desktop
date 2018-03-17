@@ -684,3 +684,14 @@ ipcMain.on('set-badge-count', (event, count) => {
     console.log(err);
   }
 });
+
+// Listen for initialLang to set Accepted-Language
+ipcMain.on('accepted-language', (e, msg) => {
+  try {
+    const ua = mainWindow.webContents.session.getUserAgent();
+    mainWindow.webContents.session.setUserAgent(ua, msg);
+  } catch (err) {
+    // pass, leave the language as is and don't crash the app
+    console.log(err);
+  }
+});
